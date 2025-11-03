@@ -152,8 +152,7 @@ void readModeTask(void *arg) {
   }
 }
 
-//----------------------------------------------------------------------------------------
-
+// Drive PWM pins
 void updateOutputs() {
   float steer = constrain(steer_us, PWM_MIN, PWM_MAX);
   float throttle = constrain(throttle_us, PWM_MIN, PWM_MAX);
@@ -168,7 +167,7 @@ void updateOutputs() {
 }
 
 
-
+// TODO
 void controlTask(void * arg) {
   const TickType_t period = pdMS_TO_TICKS(5);
   TickType_t lastWake = xTaskGetTickCount(); // returns current time in RTOS ticks
@@ -187,7 +186,7 @@ void setup() {
 
 }
 
+// TODO
 void loop() {
-  // put your main code here, to run repeatedly:
 
 }
